@@ -24,7 +24,7 @@ def format_message(message, is_running):
 async def func1(number: int):
     global is_running, current_message
     is_running = True
-    for i in range(1, 11):
+    for i in range(1, 4):
         current_message = f"Processing second is {i}"
         await updates.put(format_message(current_message, is_running))
         await asyncio.sleep(1)
