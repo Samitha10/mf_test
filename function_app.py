@@ -31,7 +31,7 @@ async def func1(number: int):
 
     current_message = "Main function completed"
     await updates.put(format_message(current_message, is_running))
-    await updates.put(format_message("Closing the stream", is_running))
+    await updates.put(format_message("Closing the stream : ", is_running))
     is_running = False
     await updates.put(format_message("Stream closed", is_running))
     process_completed_event.set()
